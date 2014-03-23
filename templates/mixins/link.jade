@@ -9,7 +9,7 @@ mixin link(link)
 					a(href='/links/link/' + link.slug, itemprop='url').text-dark
 						strong= link.label
 				if link.author
-					p.byline: small.text-muted #{link.author.name.full} &middot; added #{moment(link.publishedDate).fromNow()}
+					p.byline: small.text-muted #{link.author.name.full} &middot; added #{link.publishedDate}
 				p.link: a(href=link.href, target='_blank'): em!=link.href
 				if link.tags && link.tags.length
 					ul.list-unstyled.tags-list

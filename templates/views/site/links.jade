@@ -4,11 +4,11 @@ include ../../mixins/link
 
 block intro
 	.page-intro: .container
-		h1 Links
+		h1 Legalization Links
 		if data.tag
-			p Tutorials, Libraries, Frameworks and blog posts under <strong>#{data.tag.name}</strong>
+			p Arguments, Resources, and other information under <strong>#{data.tag.name}</strong>
 		else
-			p Tutorials, Libraries, Frameworks and blog posts mentioned in SydJS talks, or just of general usefulness.
+			p  Arguments, Resources, and other information about legalization.
 		.buttons
 			if !user
 				a(href='/join').btn.btn-primary Join SydJS
@@ -19,20 +19,16 @@ block intro
 block content
 	.container
 		.row
-			.col-sm-9	
-				if filters.tag && !data.tag
-					h3 Invalid tag.
+			.col-sm-9
+				if data.links.length
+					.blog
+						each link in data.links
+							+link(link)
 				else
-					if data.links.length
-						.blog
-							each link in data.links
-								+link(link)
+					if data.tag
+						h3.text-muted No links in the tag #{data.tag.name}.
 					else
-						if data.tag
-							h3.text-muted No links in the tag #{data.tag.name}.
-						else
-							h3.text-muted There are no links yet.
-			
+						h3.text-muted There are no links yet.
 			.col-sm-3
 				h5.text-muted Sort by
 				p: small

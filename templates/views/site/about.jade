@@ -5,11 +5,9 @@ include ../../mixins/organiser
 block intro
 	.page-intro: .container
 		h1 About
-		p It seems that SydJS has always been with us, and not just since early 2010.
+		p We are standing up for our rights as Oklahomans. We stand proud for the legalization of marijuana.
 		p With our very own Mr Speaker, Earle Castledine, set to leave our shores, Craig Sharkie herded the last few cats that allowed them to launch the first SydJS meeting.
 		.buttons
-			if !user
-				a(href='/join').btn.btn-primary Join SydJS
 			a(href="https://twitter.com/sydjs", class="twitter-follow-button", data-show-count="true" data-size="large") Follow @sydjs
 
 block content
@@ -20,11 +18,9 @@ block content
 			each org in organisers
 				.col-sm-3
 					+organiser(org)
-			
-		
 		//- CODE
 		a(name='code')
-		h2 Code of Conduct
+		h2	Mission Statement
 		.row
 			.col-sm-9.col-md-8
 				h3 We choose to share JavaScript's good parts; and we choose to share our own.

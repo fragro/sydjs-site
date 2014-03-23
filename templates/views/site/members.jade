@@ -2,13 +2,12 @@ extends ../../layouts/default
 
 block intro
 	.page-intro: .container
-		h1 Members
-		p The people and organisations who are part of SydJS. Should you be here? Join us!
+		h1 Supporters
+		p The people of OK that support and contribute to Legalize OK.
 		.buttons
 			if !user
-				a(href='/join').btn.btn-primary Join SydJS
+				a(href='/join').btn.btn-primary Join Us
 			a(href='/members/organisations').btn.btn-default View Organisations
-			a(href='/members/mentors').btn.btn-default View Mentors
 
 block content
 	.container
@@ -41,18 +40,6 @@ block content
 													//-| @#{member.github.replace('@', '')}
 								if member.bio.html
 									.bio.mt-1.text-center!= member.bio.html
-							if member.talks && member.talks.length
-								.talks
-									h6.text-muted.mt-0 Talks
-									ul.list-unstyled
-										each talk in member.talks
-											li.media(class=moment(talk.meetup.date) < moment(now) ? 'past' : 'present')
-												.pull-left
-													.date
-														small.block=moment(talk.meetup.date).format('MMM')
-														strong.block=moment(talk.meetup.date).format('DD')
-												.media-body
-													p=talk.name
 							if member.posts && member.posts.length
 								.posts
 									h6.text-muted.mt-0 Post

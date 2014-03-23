@@ -1,6 +1,9 @@
 var keystone = require('keystone'),
 	async = require('async');
 	
+var moment = require('moment');
+moment().format();
+
 var Link = keystone.list('Link');
 
 exports = module.exports = function(req, res) {
