@@ -37,7 +37,7 @@ keystone.init({
 	'cookie secret': process.env.COOKIE_SECRET || 'legalizethewalrus',
 	
 	// the default mandrill api key is a *test* key. it will 'work', but not send emails.
-	'mandrill api key': process.env.MANDRILL_KEY || 'v17RkIoARDkqTqPSbvrmkw',
+	'mandrill api key': process.env.MANDRILL_KEY || 'ce93P9iANDe62PNGRJyfRQ',
 
 	'google api key': process.env.GOOGLE_BROWSER_KEY,
 	'google server api key': process.env.GOOGLE_SERVER_KEY,
