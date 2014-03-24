@@ -1,4 +1,4 @@
-$(function() {
+/*$(function() {
 
 	var $navbarLogo = $('.navbar-logo'),
 		$easterEgg = $('#easter-egg'),
@@ -50,3 +50,4 @@ $(function() {
 	});
 
 });
+*/
