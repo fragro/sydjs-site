@@ -5,6 +5,12 @@ include ../../mixins/advertisement
 
 block content
 	//- Hero
+	if nextMeetup
+		- lastMeetup = false;
+	else
+		- nextMeetup = lastMeetup;
+
+	- nextMeetup = false;
 	section.section.home-meetup
 		.container
 			h1 Legalize Oklahoma<br>
