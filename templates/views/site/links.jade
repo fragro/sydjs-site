@@ -8,12 +8,9 @@ block intro
 		if data.tag
 			p Arguments, Resources, and other information under <strong>#{data.tag.name}</strong>
 		else
-			p  Arguments, Resources, and other information about legalization.
+			p  Arguments, Resources, and other information about legalization and the inevitable end of prohibition from outside LegalizeOk.
 		.buttons
-			if !user
-				a(href='/join').btn.btn-primary Join SydJS
-				a(href='/signin').btn.btn-default Sign In
-			else
+			if user
 				a(href='/me/create/link').btn.btn-primary Add link
 
 block content

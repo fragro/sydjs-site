@@ -5,13 +5,8 @@ include ../../mixins/post
 block intro
 	.page-intro: .container
 		h1=data.category ? data.category.name : 'Blog'
-		p This is the blog of SydJS, contributed by our members and guest authors. Join to contribute.
+		p This is where we outline our arguments for and successes to come when we <strong>end prohibition</strong>
 		.buttons
-			if !user
-				a(href='/join').btn.btn-primary Join SydJS
-				a(href='/signin').btn.btn-default Sign In
-			else
-				a(href='/me/create/post').btn.btn-primary Add post
 
 block content
 	.container

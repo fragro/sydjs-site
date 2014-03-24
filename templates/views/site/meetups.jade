@@ -5,11 +5,7 @@ include ../../mixins/meetup
 block intro
 	.page-intro: .container
 		h1 Meetups
-		p We usually meet up the 3rd Wednesday of every month. To stay in the loop, follow us on twitter.
-		.buttons
-			if !user
-				a(href='/join').btn.btn-primary Join SydJS
-			a(href="https://twitter.com/sydjs", class="twitter-follow-button", data-show-count="true" data-size="large") Follow @sydjs
+		p We are working throughout the state to effect change. Join an event near you!
 
 
 block content
@@ -29,7 +25,3 @@ block content
 		if !meetups.upcoming.length && !meetups.past.length
 			h3.text-muted There are no meetups yet.
 
-block js
-	// twitter
-	script.
-		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

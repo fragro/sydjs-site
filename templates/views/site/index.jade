@@ -17,7 +17,7 @@ block content
 	section.section.home-about: .container
 		h2 Still not sure? Read our statements about marijuana and learn more.
 		p
-			a(href='/about') Learn more about Legalization
+			a(href='/blog') Learn more about Legalization
 			|  &nbsp;&middot;&nbsp; 
 			a(href='/members') See everyday Oklahomans who support it
 			br
@@ -101,20 +101,20 @@ block content
 			.col-sm-4
 				a(href='/members/organisations').link-icon-badge: span.link-icon.entypo.entypo-globe
 				h2.home-links__heading: a(href='/members/organisations') Organisations
-				p Ju wan jQuery? Keen on Keystone? Looking for Lint? Need NICTA? Want a Webstack?
-				p There's a whole range of organisations that just help make your JavaScript life that much easier.
+				p Take a look at which local businesses and community leaders have already jumped on board the freedom train!
+				p It's the savy business owner or political who is seen by their as on the right side of history, supporting liberty in Oklahoma.
 
 			.col-sm-4
 				a(href='/members').link-icon-badge: span.link-icon.entypo.entypo-users
 				h2.home-links__heading: a(href='/members') Members
-				p At SydJS, all members are equal! To misquote Orwell, though, some are more equal than others.
-				p Want to raise your profile? Volunteer and we'll add you to the roster! Want to find out who's stepped up? It's all here.
+				p Volunteers will be sectioned off depending on which particular tasks need to be accomplishe at a given time but nonethelss according to It/Media development, Canvassers/Doorknockers, and drivers for car pools.
+				p Right now the best thing that any volunteer can be doing is if you are OKC, help gather those signatures, if you are in tulsa, help us spread the word and get people registered to vote, we have thousands of voter registration cards to hand out.
 
 			.col-sm-4
 				a(href='/links').link-icon-badge: span.link-icon.entypo.entypo-link
 				h2.home-links__heading: a(href='/links') Links
-				p Got a favourite CDN? A favourite library? A micro-library? We do! And you'll find some of them linked here.
-				p You might even find some links to things that _aren't_ JavaScript? That's right! Some things aren't JavaScript.
+				p If you are interested in some additional information regarding the medical benefits of cannabis here are some a(href='/links') Links
+				p Or if you are interested about the impact the current policy of marijuana prohibition has on Oklahoma communities
 
 		.row
 			.col-sm-4
@@ -125,6 +125,7 @@ block content
 
 			.col-sm-4
 				p: a(href='/links', class='home-links-anchor') View links
+
 
 block js
 	// twitter
@@ -150,11 +151,8 @@ block js
 					normal: new google.maps.StyledMapType(styles.normal, { name: "Normal Map" })
 				};
 				
-				// MAP OPTIONS
-				var myLatlng = new google.maps.LatLng(35.5000, -98.0000);
 				var mapOptions = {
 					zoom: 6,
-					center: myLatlng,
 					scrollwheel: false,
 					disableDefaultUI: true,
 					zoomControl: true,
@@ -171,9 +169,20 @@ block js
 				map.mapTypes.set('map_style', styledMap.paper);
 				map.setMapTypeId('map_style');
 
-				var marker = new google.maps.Marker({
-					position: myLatlng,
-					title:""
+				// MAP OPTIONS
+				var geocoder = new google.maps.Geocoder();
+				geocoder.geocode( { 'address': "#{nextMeetup.place}" }, function(results, status) {
+				if (status == google.maps.GeocoderStatus.OK) {
+					var lat = results[0].geometry.location.lat(); //getting the lat
+					var lng = results[0].geometry.location.lng(); //getting the lng
+					map.setCenter(results[0].geometry.location);
+					var marker = new google.maps.Marker({
+						map: map,
+						position: results[0].geometry.location
+					});
+				} else {
+						alert("Geocode was not successful for the following reason: " + status);
+						}
 				});
 
 				// Add the marker to the map
@@ -181,7 +190,7 @@ block js
 				
 				// Info window
 				var infowindow = new google.maps.InfoWindow({
-					content: 'Level 6, 341 George St (Atlassian)'
+					content: "#{nextMeetup.place}"
 				});
 				google.maps.event.addListener(marker, 'click', function() {
 					infowindow.open(map,marker);
