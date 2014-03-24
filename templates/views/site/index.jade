@@ -5,6 +5,7 @@ include ../../mixins/advertisement
 
 block content
 	//- Hero
+
 	if nextMeetup
 		- lastMeetup = false;
 	else
@@ -67,7 +68,7 @@ block content
 								dt
 									.sr-only Date
 									span.entypo.entypo-fixed-width.entypo-calendar
-								dd=nextMeetup._.date.format('dddd, DD MMM YYYY')
+								dd=nextMeetup._
 								dt
 									.sr-only Time
 									span.entypo.entypo-fixed-width.entypo-clock
@@ -82,7 +83,7 @@ block content
 							hr.line-dashed
 							p: a(href='/meetups').text-muted All our meetups &rarr;
 
-							+advertisement()
+							+advertisement();
 		.home-meetup-map
 			#meetup-map.map
 			a(href='https://maps.google.com.au/?daddr=' + nextMeetup.place, target='_blank').directions-button
