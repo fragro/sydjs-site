@@ -5,13 +5,6 @@ include ../../mixins/advertisement
 
 block content
 	//- Hero
-
-	if nextMeetup
-		- lastMeetup = false;
-	else
-		- nextMeetup = lastMeetup;
-
-	- nextMeetup = false;
 	section.section.home-meetup
 		.container
 			h1 Legalize Oklahoma<br>
@@ -68,7 +61,7 @@ block content
 								dt
 									.sr-only Date
 									span.entypo.entypo-fixed-width.entypo-calendar
-								dd=nextMeetup.date
+								dd=nextMeetup._.date.format('dddd, DD MMM YYYY')
 								dt
 									.sr-only Time
 									span.entypo.entypo-fixed-width.entypo-clock
