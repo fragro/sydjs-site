@@ -34,7 +34,7 @@ exports = module.exports = function(req, res) {
 			.sort('-publishedDate')
 			.limit(2)
 			.populate('author categories'));
-	
+
 	view.render('site/index');
 	
 }
