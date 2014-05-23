@@ -31,7 +31,6 @@ block content
 	section.section.home-about: .container
 		h2 The clock is ticking! Let's do this Oklahoma.
 		<div class="clock"></div>
-		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="/js/flipclock.min.js"></script>
 		<script>var clock;$(document).ready(function() {var currentDate = new Date();var futureDate  = new Date("August 18, 2014 17:00:00");var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;clock = $('.clock').FlipClock(diff, {clockFace: 'DailyCounter',countdown: true, showSeconds: false});});</script>		
 		h2 Sign the petition or volunteer today!
