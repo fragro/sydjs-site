@@ -3,6 +3,7 @@ include ../mixins/flash-messages
 doctype html
 html
 	head
+		link(rel="stylesheet",href="/css/flipclock.css")
 		if env == 'production' && chartbeat_property && chartbeat_domain
 			script.
 				var _sf_startpt=(new Date()).getTime()
@@ -68,7 +69,6 @@ html
 			p Copyleft &copy; 2014 People of Oklahoma. Powered by <a href='http://keystonejs.com', target='_blank'>KeystoneJS</a>.
 		
 	//- scripts
-	script(src='/js/lib/jquery/jquery-1.10.2.min.js')
 	script(src='/js/lib/bootstrap/collapse.js')
 	script(src='/js/lib/bootstrap/dropdown.js')
 	
