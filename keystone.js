@@ -69,7 +69,7 @@ keystone.set('locals', {
 });
 
 keystone.set('email locals', {
-	keystoneURL: 'http://www.sydjs.com/keystone',
+	keystoneURL: 'http://www.legalizeok.com/keystone',
 	logo: '/images/logo_email.jpg',
 	logo_width: 120,
 	logo_height: 112,
@@ -82,7 +82,7 @@ keystone.set('email locals', {
 keystone.set('email tests', {
 	'forgotten-password': {
 		name: 'User',
-		link: 'http://www.sydjs.com/reset-password/key'
+		link: 'http://www.legalizeok.com/reset-password/key'
 	}
 });
 

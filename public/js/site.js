@@ -1,6 +1,13 @@
-/*$(function() {
+$(function() {
+	var $container = $('#iso-container');
+		// init
+		$container.isotope({
+		  // options
+		  itemSelector: '.iso-item',
+		  layoutMode: 'masonry'
+	});
 
-	var $navbarLogo = $('.navbar-logo'),
+/*	var $navbarLogo = $('.navbar-logo'),
 		$easterEgg = $('#easter-egg'),
 		$oldLogo = $('#old-logo');
 	
@@ -47,7 +54,6 @@
 			
 		}
 	
-	});
+	});*/
 
 });
-*/

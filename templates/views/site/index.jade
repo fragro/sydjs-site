@@ -8,100 +8,120 @@ block content
 	section.section.home-meetup
 		.container
 			<br>
-			h1.down-a-bit Legalize Medical Marijuana in Oklahoma by Jan. 1, 2015<br>
 			.row
 				.col-md-6
-					h3 The petition is now underway! 
-					p.lead We are working towards a Medicinal Marijuana Constitutional Amendment with <a href="http://www.oklahomansforhealth.com/">Oklahomans For Health</a>.
-					p.lead
-						strong Petition Locations 
-						.row
-							.col-md-6
-								p <a target="blank" class="btn btn-lg btn-primary" href="https://docs.google.com/spreadsheets/d/1f1MkNJ69W-bN6SznA-oboE8ialoOBemRPY69NgjpFaM/edit?usp=sharing"><span class="entypo entypo-fixed-width entypo-numbered-list"></span> Click Here for Excel Listing </a>
-							.col-md-6
-								p <a target="blank" class="btn btn-lg btn-info" href="https://mapsengine.google.com/map/edit?mid=zVyjkmVEjdcQ.k6ftA-ss6ZF0"><span class="entypo entypo-fixed-width entypo-location"></span> Click Here for Full Map </a>
 
-					p.lead <strong>Sign the petition today</strong> to help us legalize medical marijuana.
-					p.lead Still want to do more? We need volunteers, signature gatherers, more businesses to host it, and we need your help to make sure we get this passed.
+					h3 <a href="http://www.oklahomansforhealth.com/">Oklahomans for Health</a> successfully gathered 75,384 legible signatures! 
+					p.lead Thanks to everyone that contributed. Oklahomans For Health is planning another signature gathering drive next year to get the Constitutional Amendment on the 2016 ballot.
+
+					p.lead
+						strong Ready for Phase 2?
+					p.lead We need help with funding to prepare for Phase 2. OFH will have a merchandise shop available soon, so stay tuned!
 					p.lead
 						.row
-							.col-md-5
+							.col-md-5.col-md-offset-4
 								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_s-xclick">
 								<input type="hidden" name="hosted_button_id" value="TQBXS6MWFNLBC">
 								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 								</form>
-							.col-md-6
-								a(href='https://docs.google.com/forms/d/1SAc-05NCYuH21FHTwpI8XO4p7p-qYZpsBBjNdIK5mkU/viewform').btn.btn-default.btn-lg.btn-success <span class="entypo entypo-fixed-width entypo-users"></span> Sign Up To Volunteer Today!
 
-					.row
-						.col-md-12
-							p.lead Only the people of Oklahoma can modify the state Constitution through a general election. <strong> Let's get it on the ballot and let the people decide. </strong>
-			
+				
 				.col-md-6
-					//-img.img-thumbnail(src="/images/timthumb.jpg")
-					<iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zVyjkmVEjdcQ.k6ftA-ss6ZF0" width="640" height="480"></iframe>
-	
+
+					h3 <a href="http://www.cj4ok.com/">Connie Johnson's</a> petition to legalize recreational marijuana is still underway! 
+					p.lead <a href="https://www.sos.ok.gov/documents/questions/773.pdf">SQ773</a> is still circulating petitions! If you want to sign here is a list of locations across the state.
+					
+					p.lead
+						strong Petition Information
+						.row
+							.col-md-12
+								<a target="blank" class="btn btn-lg btn-primary" href="https://www.facebook.com/download/826860480682085/Where%20Can%20I%20Sign%20the%20Recreational%20Marijuana%20Petition.docx"><span class="entypo entypo-fixed-width entypo-numbered-list"></span> Click Here for Business Listing</a>
+					p.lead <a target="blank" href="http://www.yestolegalization.com/">Yes To Legalization</a> has more information on how to get access to signature sheets for circulation. <strong>The deadline to sign the Petition is Tuesday, September 30th, 2014.</strong>
+								
+				//-<iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zVyjkmVEjdcQ.k6ftA-ss6ZF0" width="640" height="480"></iframe>
+
+			.row
+				.col-md-12
+					h2 <span class="entypo entypo-fixed-width entypo-flag"></span> Only the people of Oklahoma can modify the state Constitution through a general election. <strong> Let's get it on the ballot and let the people decide. </strong>
+
 	//- About
 	section.section.home-about: .container
-		h2 The clock is ticking! Let's do this Oklahoma.
-		<div class="clock"></div>
-		h2 Sign the petition or volunteer today!
 
-	section.section.home-meetup
+		h2 The movement has spread across the state. We have registered tens of thousands to vote. 
+		h2 This is just the beginning.
 
-		.home-meetup-wrapper
-			.container
-				h5= (lastMeetup) ? 'Our last meetup:' : 'Our next meetup:'
-				div(data-ks-editable=editable(user, { list: 'Meetup', id: nextMeetup.id }))
-					h1= nextMeetup.name
-					.row
-						.col-sm-8
-							if nextMeetup.description
-								p!= nextMeetup.description
-							if nextMeetup.talks	
-								if nextMeetup.talks.length
-									.meetup-talks
-										span.meetup-talks__icon.entypo.entypo-large.entypo-comment
-										h4.meetup-talks__heading Activities at the event
-										ul.list-unstyled
-											each talk in nextMeetup.talks
-												li.talk
-													strong.talk__name #{talk.name} 
-													if talk.who.length
-														.talk__speaker
-															| with 
-															each user, i in talk.who
-																if i
-																	| , 
-																= user.name.full + ' '
-						.col-sm-4
-							dl.dl-horizontal.home-meetup__details-list
-								dt
-									.sr-only Date
-									span.entypo.entypo-fixed-width.entypo-calendar
-								dd=nextMeetup._.date.format('dddd, DD MMM YYYY')
-								dt
-									.sr-only Time
-									span.entypo.entypo-fixed-width.entypo-clock
-								dd=nextMeetup.time
-								dt
-									.sr-only Place
-									span.entypo.entypo-fixed-width.entypo-location
-								dd=nextMeetup.place
-							if !lastMeetup
-								.register-btn
-									a(href='/attend', disabled=!nextMeetup.rsvpsAvailable).btn.btn-lg.btn-block.btn-register= nextMeetup.rsvpsAvailable ? 'Register' : 'Sold out!'
-							hr.line-dashed
-							p: a(href='/meetups').text-muted All our meetups &rarr;
+	section.section.home-blog
+		.row
+			.col-md-10.col-md-offset-1
+				#iso-container
+					.iso-item
+						img.img-thumbnail(src="/images/times/1.jpg")
+					.iso-item
+						img.img-thumbnail(src="/images/times/2.jpg")
+					.iso-item
+						img.img-thumbnail(src="/images/times/3.jpg")
+					.iso-item
+						img.img-thumbnail(src="/images/times/4.jpg")
+					.iso-item
+						img.img-thumbnail(src="/images/times/5.jpg")
+					.iso-item
+						img.img-thumbnail(src="/images/times/6.jpg")
+					.iso-item
+						img.img-thumbnail(src="/images/times/7.jpg")
+					.iso-item
+						img.img-thumbnail(src="/images/times/24.jpg")			
+					.iso-item
+						img.img-thumbnail(src="/images/times/9.jpg")
+					.iso-item
+						img.img-thumbnail(src="/images/times/10.jpg")
+					.iso-item
+						img.img-thumbnail(src="/images/times/11.jpg")							
+					.iso-item
+						img.img-thumbnail(src="/images/times/12.jpg")							
+					.iso-item
+						img.img-thumbnail(src="/images/times/13.jpg")							
+					.iso-item
+						img.img-thumbnail(src="/images/times/14.jpg")							
+					.iso-item
+						img.img-thumbnail(src="/images/times/15.jpg")							
+					.iso-item
+						img.img-thumbnail(src="/images/times/16.jpg")							
+					.iso-item
+						img.img-thumbnail(src="/images/times/17.jpg")							
+					.iso-item
+						img.img-thumbnail(src="/images/times/18.jpg")							
+					.iso-item
+						img.img-thumbnail(src="/images/times/19.jpg")							
+					.iso-item
+						img.img-thumbnail(src="/images/times/20.jpg")							
+					.iso-item
+						img.img-thumbnail(src="/images/times/21.jpg")							
+					.iso-item
+						img.img-thumbnail(src="/images/times/22.jpg")					
+										
 
-		.home-meetup-map
-			#meetup-map.map
-			a(href='https://maps.google.com.au/?daddr=' + nextMeetup.place, target='_blank').directions-button
-				span.entypo.entypo-popup
-				|  Get Directions
+	section.section.home-links: .container
+		.row
+			.col-sm-6
+				a(href='https://www.facebook.com/groups/608244022593260/').link-icon-badge: span.link-icon.entypo.entypo-megaphone
+				h2.home-links__heading: a(href='https://www.facebook.com/groups/608244022593260/') Join the Discussion
+				p Join the discussion at LegalizeOK on Facebook and stay up to date with activists in your area!
+				p Share, like, and comment on what others are doing across the state.
 
+			.col-sm-6
+				a(href='https://www.loomio.org/g/BNSoCnt8/oklahomans-for-health').link-icon-badge: span.link-icon.entypo.entypo-users
+				h2.home-links__heading: a(href='https://www.loomio.org/g/BNSoCnt8/oklahomans-for-health') Make Decisions Together
+				p Oklahomans for Health is opening up its decision making process to the collective intelligence of the group!
+				p Join today and help make us decisions! 
+
+		.row
+			.col-sm-6
+				p: a(href='https://www.facebook.com/groups/608244022593260/', class='home-links-anchor') LegalizeOK on Facebook
+
+			.col-sm-6
+				p: a(href='https://www.loomio.org/g/BNSoCnt8/oklahomans-for-health', class='home-links-anchor') Group Decision Making on Loomio
 
 	//- Blog
 	if posts.length
@@ -125,7 +145,7 @@ block content
 				p Is your organization ready to be on the right side of history? Join us.
 
 			.col-sm-4
-				a(href='/members').link-icon-badge: span.link-icon.entypo.entypo-users
+				a(href='/members').link-icon-badge: span.link-icon.entypo.entypo-user
 				h2.home-links__heading: a(href='/members') Supporters
 				p Support for Marijuana Legalization has changed drastically over the past few years.
 				p Everyday Oklahomans support legalization of marijuana. See those who have come out publicly in support of LegalizeOK.
