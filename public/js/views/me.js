@@ -1,5 +1,4 @@
 $(function() {
-	
 	// Handle attendence
 	var $nextMeetup = $('#next-meetup');
 	if ($nextMeetup.length) {
