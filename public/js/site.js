@@ -1,7 +1,7 @@
 $(function() {
 	var $container = $('#iso-container');
 		// init
-		$container.isotope({
+		$container.fadeIn(1000).isotope({
 		  // options
 		  itemSelector: '.iso-item',
 		  layoutMode: 'masonry'
