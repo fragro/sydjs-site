@@ -47,6 +47,7 @@ exports = module.exports = function(app) {
 	app.get('/blog/:category?', routes.views.blog);
 	app.all('/blog/post/:post', routes.views.post);
 	app.get('/about', routes.views.about);
+	app.get('/timeline', routes.views.timeline);	
 	app.get('/supporting', routes.views.mentoring);
 	
 	// Session
