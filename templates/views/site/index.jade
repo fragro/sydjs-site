@@ -3,6 +3,13 @@ extends ../../layouts/default
 include ../../mixins/post
 include ../../mixins/advertisement
 
+block head
+	meta(property="og:title", content="LegalizeOK")
+	meta(property="og:url" content="http://legalizeok.org")
+	meta(property="og:site_name" content="LegalizeOK")
+	meta(property="og:image" content="http://legalizeok.org/images/times/1.jpg")
+	meta(property="og:description" content="Standing in the name of Democracy against the evils of Prohibition")
+
 block content
 	//- Hero
 	section.section.home-meetup
